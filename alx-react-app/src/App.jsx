@@ -21,11 +21,11 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-     <WelcomeMessage/>
-     <Header/>
-     <MainContent/>
-     <Footer/>
-     <UserProfile name="Alice" age = "25" bio = "Loves hiking and photography" />
+     <WelcomeMessage />
+     <Header />
+     <MainContent />
+     <Footer />
+     <UserProfile name="Alice" age= "25" bio= "Loves hiking and photography" />
       <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
