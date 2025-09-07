@@ -6,9 +6,9 @@ import ProfilePage from './components/profilePage'
 function App() {
   const userData = {name:'Jane Doe', email: 'jane.doe@example.com'}
   
-return <UserContext.povider value={userData}>
+return <UserContext.Povider value={userData}>
    <ProfilePage />
-   </UserContext.povider>
+   </UserContext.Povider>
 }
 
 export default App
