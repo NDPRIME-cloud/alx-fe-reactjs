@@ -3,4 +3,4 @@ import useRecipeStore from '../recipeStores/useRecipeStore'
 
 
 addRecipe
-setRecipe
+setRecipes
