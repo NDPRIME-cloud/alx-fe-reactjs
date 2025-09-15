@@ -1,18 +1,39 @@
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import useRecipeStore from "./recipeStores/useRecipeStore";
+import RecipeDetails from "./components/RecipeDetails";
+import AddRecipeForm from "./components/AddRecipeForm";
 
-
-import './App.css'
-import RecipeList from './components/RecipeList'
-import AddRecipeForm from './components/AddRecipeForm'
-
-function App() {
-  
+function Home() {
+  const recipes = useRecipeStore((state) => state.recipes);
 
   return (
-    <>
-      <RecipeList/>
-      <AddRecipeForm/>
-    </>
-  )
+    <div>
+      <h1>Recipe List</h1>
+      <ul>
+        {recipes.map((recipe) => (
+          <li key={recipe.id}>
+            <Link to={`/recipes/${recipe.id}`}>{recipe.title}</Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
-export default App
+function App() {
+  return (
+    <Router>
+      <Routes>
+        {/* Home route */}
+        <Route path="/" element={<Home />} />
+
+        {/* Dynamic route for recipe details */}
+        <Route path="/recipes/:recipeId" element={<RecipeDetails />} />
+      </Routes>
+      
+    </Router>
+   
+  );
+}
+
+export default App;
