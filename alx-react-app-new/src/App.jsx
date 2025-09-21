@@ -7,6 +7,7 @@ import MainContent from './components/MainContent'
 import Footer from './components/Footer'
 import UserProfile from './components/UserProfile'
 import Counter from './components/Counter'
+import NewCounter from './components/NewCounter'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -36,6 +37,7 @@ const [toggle , setToggle] = useState(false)
      <UserProfile name="Alice" age= "25" bio= "Loves hiking and photography" />
      <Footer />
      <Counter/>
+     <NewCounter/>
     
     </>
   )
