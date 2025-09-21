@@ -1,5 +1,5 @@
 import SearchBar from "./components/SearchBar";
-import api from "./assets/services/api";
+import api from "./services/api";
 
 
 function App() {
