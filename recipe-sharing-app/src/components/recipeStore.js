@@ -8,10 +8,22 @@ import { create } from "zustand";
     { id: 2, title: "Salad", description: "Fresh garden salad" },
   ],
 
+
+    searchTerm: '',
+  setSearchTerm: (term) => set({ searchTerm: term }),
+  filteredRecipes: [],
+  filterRecipes: () => set(state => ({
+    filteredRecipes: state.recipes.filter(recipe =>
+      recipe.title.toLowerCase().includes(state.searchTerm.toLowerCase())
+    )
+  })),
+
+
+
   // 🔹 Update recipe
   updateRecipe: (id, updatedRecipe) =>
     set((state) => ({
-      addRecipe,
+      
       recipes: state.recipes.map((recipe) =>
         recipe.id === id ? { ...recipe, ...updatedRecipe } : recipe
       ),
