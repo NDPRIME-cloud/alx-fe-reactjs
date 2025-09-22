@@ -7,3 +7,4 @@ export const fetchUserData = async (username) => {
   return response.data;
 };
 axios
+https://api.github.com
