@@ -1,10 +1,13 @@
-import axios from "axios";
 import api from "./api";
 
-// Fetch GitHub user data by username
-export const fetchUserData = async (username) => {
-  const response = await api.get(`/users/${username}`);
+// Advanced search using query params
+export const searchUsers = async ({ username, location, repos }) => {
+  let query = "";
+
+  if (username) query += `${username} in:login `;
+  if (location) query += `location:${location} `;
+  if (repos) query += `repos:>=${repos}`;
+
+  const response = await api.get(`/search/users?q=${encodeURIComponent(query)}`);
   return response.data;
 };
-axios
-https://api.github.com
