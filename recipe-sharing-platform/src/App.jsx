@@ -2,7 +2,7 @@
 import './App.css'
 import { BrowserRouter,Router,Routes,Route} from 'react-router-dom'
 import HomePage from './components/HomePage'
-import RecipeDetail from './components/RecipeDetails'
+import RecipeDetail from './components/RecipeDetail'
 
 function App() {
  
