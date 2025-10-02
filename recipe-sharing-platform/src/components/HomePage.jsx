@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import data from "./data.json"; // Import mock data
+import data from "../data.json"; // Import mock data
 
 const HomePage = () => {
   const [recipes, setRecipes] = useState([]);

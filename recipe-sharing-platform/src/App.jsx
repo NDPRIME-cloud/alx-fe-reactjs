@@ -1,7 +1,7 @@
 
 import './App.css'
 import Letters from './components/Letters'
-import HomePage from './HomePage'
+import HomePage from './components/HomePage'
 
 function App() {
  
