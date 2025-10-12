@@ -4,7 +4,7 @@ import RegistrationForm from "./components/RegistrationForm";
 function App() {
   return (
     <div>
-      <FormikForm/>
+      <formikForm/>
     </div>
   );
 }
