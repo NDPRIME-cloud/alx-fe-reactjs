@@ -1,6 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 
-export default function Profile() {
+ function Profile() {
   return (
     <div>
       <h2>User Profile</h2>
@@ -15,3 +15,5 @@ export default function Profile() {
     </div>
   );
 }
+
+export default Profile

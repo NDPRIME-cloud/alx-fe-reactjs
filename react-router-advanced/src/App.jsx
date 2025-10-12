@@ -5,7 +5,7 @@ import ProtectedRoute from "./assets/components/ProctectedRoute";
 import Home from "./assets/components/Home";
 import About from "./assets/components/About";
 import Post from "./assets/components/Post";
-import Profile from "./assets/components/profile";
+import Profile from "./assets/components/Profile";
 
 function App() {
   return (
