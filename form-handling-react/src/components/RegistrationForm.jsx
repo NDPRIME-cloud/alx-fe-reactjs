@@ -2,29 +2,32 @@ import React, { useState } from "react";
 
 const RegistrationForm = () => {
   // form states
-  const [formData, setFormData] = useState({
-    username: "",
-    email: "",
-    password: "",
-  });
+//   const [formData, setFormData] = useState({
+//     username: "",
+//     email: "",
+//     password: "",
+//   });
+  const [username,setUsername] = useState("")
+  const [email, setEmail] = useState("")
+  const [password,setPassword] = useState("")
 
   const [error, setError] = useState("");
 
   // handle input change
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setFormData((prev) => ({
+//       ...prev,
+//       [name]: value,
+//     }));
+//   };
 
   // handle submit
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // basic validation
-    if (!formData.username || !formData.email || !formData.password) {
+    if (!username || !email || !password) {
       setError("All fields are required!");
       return;
     }
@@ -32,10 +35,12 @@ const RegistrationForm = () => {
     setError("");
 
     // simulate API submission
-    console.log("Submitting form data to API:", formData);
+    console.log("Submitting form data to API:",username,email, password);
 
     // reset
-    setFormData({ username: "", email: "", password: "" });
+     setUsername("");
+     setEmail("");
+     setPassword("")
   };
 
   return (
@@ -46,24 +51,24 @@ const RegistrationForm = () => {
           type="text"
           name="username"
           placeholder="Username"
-          value={formData.username}
-          onChange={handleChange}
+          value={username}
+          onChange={ (e)=>e.target.value}
           style={styles.input}
         />
         <input
           type="email"
           name="email"
           placeholder="Email"
-          value={formData.email}
-          onChange={handleChange}
+          value={email}
+          onChange={e=>e.target.value}
           style={styles.input}
         />
         <input
           type="password"
           name="password"
           placeholder="Password"
-          value={formData.password}
-          onChange={handleChange}
+          value={password}
+          onChange={e=>e.target.value}
           style={styles.input}
         />
 
