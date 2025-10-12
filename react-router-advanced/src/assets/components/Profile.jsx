@@ -1,19 +1,9 @@
-import { Link, Outlet } from "react-router-dom";
-
- function Profile() {
+export default function ProfileDetails() {
   return (
     <div>
-      <h2>User Profile</h2>
-      <nav style={{ display: "flex", gap: "10px", justifyContent: "center" }}>
-        <Link to="details">Profile Details</Link>
-        <Link to="settings">Profile Settings</Link>
-      </nav>
-
-      <hr />
-      {/* Outlet renders nested child components */}
-      <Outlet />
+      <h3>Profile Details</h3>
+      <p>Name: PRIME</p>
+      <p>Email: prime@example.com</p>
     </div>
   );
 }
-
-export default Profile

@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import ProfileDetails from "./assets/components/ProfileDetails";
+import ProfileDetails from "./assets/components/Profile";
 import ProfileSettings from "./assets/components/ProfileSettings";
 import ProtectedRoute from "./assets/components/ProctectedRoute";
 import Home from "./assets/components/Home";
 import About from "./assets/components/About";
 import Post from "./assets/components/Post";
-import Profile from "./assets/components/Profile";
+import Profile from "./assets/components/ProfileDesk";
 
 function App() {
   return (
