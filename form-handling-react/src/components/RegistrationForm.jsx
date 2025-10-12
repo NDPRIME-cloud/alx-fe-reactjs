@@ -11,7 +11,7 @@ const RegistrationForm = () => {
   const [email, setEmail] = useState("")
   const [password,setPassword] = useState("")
 
-  const [error, setError] = useState("");
+  const [errors, setErrors] = useState("");
 
   // handle input change
 //   const handleChange = (e) => {
@@ -27,8 +27,8 @@ const RegistrationForm = () => {
     e.preventDefault();
 
     // basic validation
-    if (!username , !email , !password) {
-      setError("All fields are required!");
+    if (!username || !email || !password) {
+      setErrors("All fields are required!");
       return;
     }
 
@@ -72,7 +72,7 @@ const RegistrationForm = () => {
           style={styles.input}
         />
 
-        {error && <p style={styles.error}>{error}</p>}
+        {errors && <p style={styles.error}>{error}</p>}
         <button type="submit" style={styles.button}>
           Register
         </button>
