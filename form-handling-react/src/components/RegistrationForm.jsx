@@ -5,11 +5,11 @@ const RegistrationForm = () => {
 //   const [formData, setFormData] = useState({
 //     username: "",
 //     email: "",
-//     passWord: "",
+//     password: "",
 //   });
   const [username,setUsername] = useState("")
   const [email, setEmail] = useState("")
-  const [passWord,setPassWord] = useState("")
+  const [password,setPassword] = useState("")
 
   const [errors, setErrors] = useState("");
 
@@ -27,7 +27,7 @@ const RegistrationForm = () => {
     e.preventDefault();
 
     // basic validation
-    if (!username || !email || !passWord) {
+    if (!username || !email || !password) {
       setErrors("All fields are required!");
       return;
     }
@@ -35,12 +35,12 @@ const RegistrationForm = () => {
     setErrors("");
 
     // simulate API submission
-    console.log("Submitting form data to API:",username,email, passWord);
+    console.log("Submitting form data to API:",username,email, password);
 
     // reset
      setUsername("");
      setEmail("");
-     setPassWord("")
+     setPassword("")
   };
 
   return (
@@ -64,10 +64,10 @@ const RegistrationForm = () => {
           style={styles.input}
         />
         <input
-          type="passWord"
-          name="passWord"
+          type="password"
+          name="password"
           placeholder="Password"
-          value={passWord}
+          value={password}
           onChange={e=>e.target.value}
           style={styles.input}
         />
