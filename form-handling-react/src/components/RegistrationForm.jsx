@@ -27,10 +27,20 @@ const RegistrationForm = () => {
     e.preventDefault();
 
     // basic validation
-    if (!username || !email || !password) {
+    if (!username ) {
       setErrors("All fields are required!");
       return;
     }
+    if (!email){
+      setErrors("All fields are required!");
+      return;
+    }
+    
+    if (!password){
+      setErrors("All fields are required!");
+      return;
+    }
+        
 
     setErrors("");
 
