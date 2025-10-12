@@ -5,11 +5,11 @@ const RegistrationForm = () => {
 //   const [formData, setFormData] = useState({
 //     username: "",
 //     email: "",
-//     password: "",
+//     passWord: "",
 //   });
   const [username,setUsername] = useState("")
   const [email, setEmail] = useState("")
-  const [password,setPassword] = useState("")
+  const [passWord,setPassWord] = useState("")
 
   const [errors, setErrors] = useState("");
 
@@ -27,20 +27,20 @@ const RegistrationForm = () => {
     e.preventDefault();
 
     // basic validation
-    if (!username || !email || !password) {
+    if (!username || !email || !passWord) {
       setErrors("All fields are required!");
       return;
     }
 
-    setError("");
+    setErrors("");
 
     // simulate API submission
-    console.log("Submitting form data to API:",username,email, password);
+    console.log("Submitting form data to API:",username,email, passWord);
 
     // reset
      setUsername("");
      setEmail("");
-     setPassword("")
+     setPassWord("")
   };
 
   return (
@@ -64,15 +64,15 @@ const RegistrationForm = () => {
           style={styles.input}
         />
         <input
-          type="password"
-          name="password"
+          type="passWord"
+          name="passWord"
           placeholder="Password"
-          value={password}
+          value={passWord}
           onChange={e=>e.target.value}
           style={styles.input}
         />
 
-        {errors && <p style={styles.error}>{error}</p>}
+        {errors && <p style={styles.error}>{errors}</p>}
         <button type="submit" style={styles.button}>
           Register
         </button>
