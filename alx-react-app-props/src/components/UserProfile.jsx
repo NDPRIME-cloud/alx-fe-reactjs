@@ -1,8 +1,8 @@
-import React,{ useContext } from "react"
-import UserContext from "./UserContext"
+// import React,{ useContext } from "react"
+// import UserContext from "./UserContext"
 
 
 
-const UserProfile = 
+// const UserProfile = 
 
-export default UserProfile
+// export default UserProfile

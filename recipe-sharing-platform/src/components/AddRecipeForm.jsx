@@ -106,7 +106,7 @@ const AddRecipeForm = () => {
           validate
         </button>
       </form>
-    </div>
+    </div> 
   );
 };
 
